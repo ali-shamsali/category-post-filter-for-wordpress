@@ -1,0 +1,59 @@
+/* استایل سایدبار و لیست دسته‌بندی‌ها */
+.custom-container {
+    display: flex;
+}
+.custom-sidebar {
+    width: 25%;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+}
+.custom-category-list {
+    list-style-type: none;
+    padding: 0;
+}
+.custom-category-item {
+    margin-bottom: 10px;
+}
+.custom-subcategory-list {
+    padding-left: 15px;
+}
+.custom-subcategory {
+    margin-right: 5px;
+}
+
+/* استایل نمایش پست‌ها */
+.custom-posts {
+    width: 75%;
+    padding: 15px;
+}
+
+/* کارت‌ها کنار هم در قالب شبکه */
+.custom-posts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.custom-post-card {
+    flex: 0 0 32%; /* نمایش سه کارت در هر ردیف */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.custom-post-thumbnail {
+    width: 100%;
+    height: auto;
+}
+.custom-post-content {
+    padding: 15px;
+}
+.custom-post-content h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.custom-post-content p {
+    font-size: 0.9em;
+    color: #555;
+}
