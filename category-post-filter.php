@@ -2,8 +2,8 @@
 /*
 Plugin Name: Category Post Filter
 Description: نمایش دسته‌بندی‌ها و زیر دسته‌ها همراه با فیلتر کردن پست‌ها براساس انتخاب چندین زیر دسته.
-Version: 4.0
-Author: Your Name
+Version: 1.0
+Author: ali shamsali
 */
 
 function cpf_enqueue_scripts() {
