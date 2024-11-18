@@ -1,10 +1,11 @@
 /* استایل سایدبار و لیست دسته‌بندی‌ها */
 .custom-container {
     display: flex;
+    flex-wrap: wrap; /* برای موبایل: اجبار به رفتن به خطوط جدید */
 }
 .custom-sidebar {
-    width: 25%;
-    padding: 15px;
+    width: 15%;
+    padding-right: 10px;
     background-color: #f4f4f4;
     border-right: 1px solid #ddd;
 }
@@ -56,4 +57,42 @@
 .custom-post-content p {
     font-size: 0.9em;
     color: #555;
+}
+
+/* مدیا کوئری‌ها برای رسپانسیو */
+
+/* تبلت‌ها و نمایشگرهای متوسط */
+@media (max-width: 768px) {
+    .custom-sidebar {
+        width: 100%; /* سایدبار در عرض کامل نمایش داده شود */
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+    .custom-posts {
+        width: 100%; /* محتوا در عرض کامل نمایش داده شود */
+    }
+    .custom-post-card {
+        flex: 0 0 48%; /* دو کارت در هر ردیف */
+    }
+}
+
+/* موبایل‌ها و نمایشگرهای کوچک */
+@media (max-width: 480px) {
+    .custom-sidebar {
+        width: 100%; /* سایدبار در عرض کامل */
+        margin-bottom: 15px;
+    }
+    .custom-posts {
+        width: 100%; /* پست‌ها در عرض کامل */
+    }
+    .custom-post-card {
+        flex: 0 0 100%; /* هر کارت در یک ردیف */
+    }
+    .custom-post-content h4 {
+        font-size: 1em; /* کاهش سایز فونت عناوین */
+    }
+    .custom-post-content p {
+        font-size: 0.8em; /* کاهش سایز توضیحات */
+    }
 }
