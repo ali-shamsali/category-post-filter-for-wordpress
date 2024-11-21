@@ -1,24 +1,31 @@
 /* استایل سایدبار و لیست دسته‌بندی‌ها */
 .custom-container {
     display: flex;
-    flex-wrap: wrap; /* برای موبایل: اجبار به رفتن به خطوط جدید */
+    flex-wrap: wrap;
+    /* برای موبایل: اجبار به رفتن به خطوط جدید */
 }
+
 .custom-sidebar {
     width: 15%;
     padding-right: 10px;
     background-color: #f4f4f4;
     border-right: 1px solid #ddd;
 }
+
 .custom-category-list {
     list-style-type: none;
     padding: 0;
 }
+
 .custom-category-item {
     margin-bottom: 10px;
 }
+
 .custom-subcategory-list {
     padding-left: 15px;
+
 }
+
 .custom-subcategory {
     margin-right: 5px;
 }
@@ -35,28 +42,39 @@
     flex-wrap: wrap;
     gap: 15px;
 }
+
 .custom-post-card {
-    flex: 0 0 32%; /* نمایش سه کارت در هر ردیف */
+    flex: 0 0 32%;
+    /* نمایش سه کارت در هر ردیف */
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .custom-post-thumbnail {
     width: 100%;
     height: auto;
 }
+
 .custom-post-content {
     padding: 15px;
 }
+
 .custom-post-content h4 {
     margin: 0;
     font-size: 1.2em;
 }
+
 .custom-post-content p {
     font-size: 0.9em;
     color: #555;
+}
+
+.strong-style {
+    color: rgb(37, 37, 158);
+    margin: 10px 0;
 }
 
 /* مدیا کوئری‌ها برای رسپانسیو */
@@ -64,35 +82,99 @@
 /* تبلت‌ها و نمایشگرهای متوسط */
 @media (max-width: 768px) {
     .custom-sidebar {
-        width: 100%; /* سایدبار در عرض کامل نمایش داده شود */
+        width: 100%;
         border-right: none;
         border-bottom: 1px solid #ddd;
         margin-bottom: 15px;
     }
+
     .custom-posts {
-        width: 100%; /* محتوا در عرض کامل نمایش داده شود */
+        width: 100%;
     }
+
     .custom-post-card {
-        flex: 0 0 48%; /* دو کارت در هر ردیف */
+        flex: 0 0 48%;
+    }
+
+    .mobile-cu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .item-mobile-cu {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .custom-category-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 33px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
 }
 
 /* موبایل‌ها و نمایشگرهای کوچک */
 @media (max-width: 480px) {
     .custom-sidebar {
-        width: 100%; /* سایدبار در عرض کامل */
+        width: 100%;
         margin-bottom: 15px;
     }
+
     .custom-posts {
-        width: 100%; /* پست‌ها در عرض کامل */
+        width: 100%;
+
     }
+
     .custom-post-card {
-        flex: 0 0 100%; /* هر کارت در یک ردیف */
+        flex: 0 0 100%;
+
     }
+
     .custom-post-content h4 {
-        font-size: 1em; /* کاهش سایز فونت عناوین */
+        font-size: 1em;
+
     }
+
     .custom-post-content p {
-        font-size: 0.8em; /* کاهش سایز توضیحات */
+        font-size: 0.8em;
+
+    }
+
+    .mobile-cu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .item-mobile-cu {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .custom-category-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 33px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
 }

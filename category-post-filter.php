@@ -30,8 +30,8 @@ function cpf_display_categories() {
     echo '<ul class="custom-category-list">';
     
     foreach ($categories as $category) {
-        echo '<li class="custom-category-item">';
-        echo '<strong>' . esc_html($category->name) . '</strong>';
+        echo '<li class="custom-category-item item-mobile-cu">';
+        echo '<strong class="strong-style">' . esc_html($category->name) . '</strong>';
 
         $subcategories = get_categories(array(
             'parent'       => $category->term_id,
@@ -39,7 +39,7 @@ function cpf_display_categories() {
         ));
         
         if (!empty($subcategories)) {
-            echo '<ul class="custom-subcategory-list">';
+            echo '<ul class="custom-subcategory-list mobile-cu">';
             foreach ($subcategories as $subcategory) {
                 echo '<li>';
                 echo '<label><input type="checkbox" class="custom-subcategory" value="' . esc_attr($subcategory->term_id) . '"> ' . esc_html($subcategory->name) . '</label>';
